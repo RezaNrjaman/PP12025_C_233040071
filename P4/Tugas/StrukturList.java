@@ -73,7 +73,7 @@ public class StrukturList {
     public void displayElement() {
         Node curNode = HEAD;
         while (curNode != null) {
-            System.out.println(curNode.getData()+ " ");
+            System.out.print(curNode.getData()+ " ");
             curNode = curNode.getNext();
         }
     }

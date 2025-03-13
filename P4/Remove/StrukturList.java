@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P4;
+package PP12025_C_233040071.P4.Remove;
 
 public class StrukturList {
 
@@ -67,6 +67,38 @@ public class StrukturList {
                     posNode.setNext(newNode);
                     newNode.setNext(curNode);
             }
+        }
+    }
+
+    public void dispose(Node node) {
+        node.setNext(null);
+        node = null;
+    }
+
+    public void removeHead() {
+        if(isEmpty()) {
+            System.out.println("List is empty");
+        } else {
+            Node temp = HEAD;
+            HEAD = HEAD.getNext();
+            dispose(temp);
+        }
+    }
+
+    public void removeTail() {
+        if(isEmpty()) {
+            System.out.println("List is empty");
+        } else {
+            Node lastNode = HEAD;
+            Node preNode = null;
+
+            while (lastNode.getNext() != null) {
+                preNode = lastNode;
+                lastNode = lastNode.getNext();
+            }
+
+            preNode.setNext(null);
+            dispose(lastNode);
         }
     }
 

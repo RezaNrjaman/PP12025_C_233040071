@@ -1,11 +1,11 @@
-package PP12025_C_233040071.P4.Tugas;
+package PP12025_C_233040071.P5;
 
 public class Node {
-    private double data;
+    private int data;
     private Node next;
 
     // inisialisasi Node
-    public Node(Double data) {
+    public Node(int data) {
         this.data = data;
     }
 
@@ -19,11 +19,11 @@ public class Node {
         return next;
     }
 
-    public void setData(Double data) {
+    public void setData(int data) {
         this.data = data;
     }
 
-    public Double getData() {
+    public Integer getData() {
         return data;
     } 
 }
