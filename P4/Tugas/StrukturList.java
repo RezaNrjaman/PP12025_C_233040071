@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P4.Tugas;
+package P4.Tugas;
 
 public class StrukturList {
     

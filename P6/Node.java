@@ -1,4 +1,4 @@
-package P5;
+package P6;
 
 public class Node {
     private int data;

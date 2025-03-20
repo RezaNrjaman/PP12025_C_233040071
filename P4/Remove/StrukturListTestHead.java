@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P4.Remove;
+package P4.Remove;
 
 public class StrukturListTestHead {
     public static void main(String[] args) {

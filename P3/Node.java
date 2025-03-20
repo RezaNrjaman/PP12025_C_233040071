@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P3;
+package P3;
 
 public class Node {
     private int data;

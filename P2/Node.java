@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P2;
+package P2;
 
 public class Node {
 

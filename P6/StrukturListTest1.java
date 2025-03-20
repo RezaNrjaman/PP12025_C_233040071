@@ -1,14 +1,14 @@
-package P3;
+package P6;
 
-public class Tes1bMain {
+public class StrukturListTest1 {
     public static void main(String[] args) {
         StrukturList list = new StrukturList();
-        list.addTail(1);
-        list.addTail(4);
         list.addTail(5);
-        list.addTail(7);
-
-        System.out.println("Elemen: ");
+        list.addTail(4);
+        list.addTail(6);
+        
         list.displayElement();
+
+        System.out.println("\n" + list.find(6));
     }
 }

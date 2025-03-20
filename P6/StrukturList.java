@@ -1,4 +1,4 @@
-package P4.Remove;
+package P6;
 
 public class StrukturList {
 
@@ -101,6 +101,71 @@ public class StrukturList {
             dispose(lastNode);
         }
     }
+
+    public void removeMid(int data) {
+        if(isEmpty()) {
+            System.out.println("list is empty");
+        } else {
+            Node preNode = null;
+            Node tempNode = HEAD;
+            boolean ketemu = false;
+            int i = 1;
+
+            while (tempNode.getNext() != null && !ketemu) {
+                if(tempNode.getData() == data) {
+                    ketemu = true;
+                } else {
+                    preNode = tempNode;
+                    tempNode = tempNode.getNext();
+                    i++;
+                }
+            }
+            if (tempNode.getNext() == null && tempNode.getData() == data){
+                ketemu = true;
+            }
+            if (ketemu) {
+                if(i == 1) {
+                    HEAD = null;
+                } else {
+                    preNode.setNext(tempNode.getNext());
+                    dispose(tempNode);
+                }
+            }else {
+                System.out.println("Data " + data + "tidak ditemukan ketemu");
+            }
+        }
+    }
+
+    public boolean find(int x) {
+		Node curNode = HEAD;
+		boolean ketemu = false;
+		
+		while(curNode != null && !ketemu) {
+			if(curNode.getData() == x) 
+				ketemu = true;
+			else
+				curNode = curNode.getNext();
+		}
+		return ketemu;
+	}
+
+    public int size() {
+        Node curNode = HEAD;
+        int jumlah = 0;
+
+        while (curNode != null) {
+            jumlah = jumlah + 1;
+            curNode = curNode.getNext();
+        }
+        return jumlah;
+    }
+
+    public void removeAll() {
+		while(!isEmpty()) {
+			removeHead();
+		}
+        System.out.println("\nList Kosong");
+	}
 
     public void displayElement() {
         Node curNode = HEAD;

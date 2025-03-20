@@ -1,4 +1,4 @@
-package PP12025_C_233040071.P4;
+package P4;
 
 public class StrukturListTest {
     public static void main(String[] args) {
