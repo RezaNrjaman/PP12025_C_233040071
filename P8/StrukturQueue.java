@@ -42,6 +42,7 @@ public class StrukturQueue {
         }
         return size;
     }
+    
     public int front() {
         return FRONT != null ? FRONT.getData() : -1;
     }
